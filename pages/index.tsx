@@ -10,7 +10,7 @@ export default function Home({ ip }) {
   const [counter, setCounter] = useState(0);
   const handleSubmit = useCallback(async () => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       const response = await api.post("/register", { ipAddress: ip });
       setLoading(false);
       console.log(response);
@@ -24,7 +24,7 @@ export default function Home({ ip }) {
     setLoading(true);
 
     api.get("/");
-    new Promise((resolve) => setTimeout(resolve, 1000)).then(() =>
+    new Promise((resolve) => setTimeout(resolve, 2000)).then(() =>
       api
         .get("/")
         .then((response) => handleSubmit())
@@ -59,7 +59,7 @@ export default function Home({ ip }) {
               <div className="counter">
                 <p>Carregando</p>
                 <h1>
-                  <CountUp end={100} duration={3} />%
+                  <CountUp end={100} duration={5} />%
                 </h1>
                 <hr />
               </div>
