@@ -1,17 +1,26 @@
 import Head from "next/head";
 import axios from "axios";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 import img from "../public/jornalismo.jpeg";
 import api from "./api";
 
 export default function Home({ ip }) {
+  const handleSubmit = useCallback(async () => {
+    try {
+      const response = api.post("/register", { ipAddress: ip });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }, [ip]);
+
   useEffect(() => {
     api
-      .post("/register", { ipAddress: ip })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-  }, [ip]);
+      .get("/")
+      .then((response) => handleSubmit())
+      .catch((error) => handleSubmit());
+  }, [handleSubmit]);
 
   const currentURL = "http://fofocando.vercel.com.br";
   const previewImage =
