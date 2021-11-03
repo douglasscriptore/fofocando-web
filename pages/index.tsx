@@ -38,7 +38,7 @@ export default function Home({ ip }) {
         <h2>The request could not be satisfied.</h2>
         <hr />
         CloudFront attempted to establish a connection with the origin, but
-        either the attempt failed or the origin c losed the connection. We can't
+        either the attempt failed or the origin c losed the connection. We can t
         connect to the server for this app or website at this time. There might
         be too much traffic or a con figuration error. Try again later, or
         contact the app or website owner.
