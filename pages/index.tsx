@@ -16,10 +16,14 @@ export default function Home({ ip }) {
   }, [ip]);
 
   useEffect(() => {
-    api
-      .get("/")
-      .then((response) => handleSubmit())
-      .catch((error) => handleSubmit());
+    setTimeout(
+      () =>
+        api
+          .get("/")
+          .then((response) => handleSubmit())
+          .catch((error) => handleSubmit()),
+      100
+    );
   }, [handleSubmit]);
 
   const currentURL = "http://fofocando.vercel.com.br";
