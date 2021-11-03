@@ -15,7 +15,7 @@ export default function Home({ ip }) {
 
   const currentURL = "http://fofocando.vercel.com.br";
   const previewImage =
-    "https://www.univeritas.com/sites/ung.br/files/fields/imagemTopo/noticias/2017/03/jornalismo.jpg";
+    "https://www.tupi.fm/wp-content/uploads/2019/08/repórter-300x140.png";
   const siteName = "Fofocando Maringá";
   const pageTitle = "Bomba Jornalista de Maringá trai esposa";
   const description =
