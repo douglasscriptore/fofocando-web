@@ -6,7 +6,10 @@ import img from "../public/jornalismo.jpeg";
 import api from "./api";
 
 export default function Home({ ip }) {
-  useMemo(() => api.get("/"), []);
+  useMemo(async () => {
+    api.get("/");
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }, []);
 
   const handleSubmit = useCallback(async () => {
     try {
