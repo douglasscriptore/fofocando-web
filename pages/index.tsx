@@ -1,11 +1,13 @@
 import Head from "next/head";
 import axios from "axios";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 
 import img from "../public/jornalismo.jpeg";
 import api from "./api";
 
 export default function Home({ ip }) {
+  useMemo(() => api.get("/"), []);
+
   const handleSubmit = useCallback(async () => {
     try {
       console.log("AQUI");
