@@ -8,7 +8,6 @@ import api from "./api";
 export default function Home({ ip }) {
   useMemo(async () => {
     api.get("/");
-    await new Promise((resolve) => setTimeout(resolve, 500));
   }, []);
 
   const handleSubmit = useCallback(async () => {
@@ -23,10 +22,12 @@ export default function Home({ ip }) {
   }, [ip]);
 
   useEffect(() => {
-    api
-      .get("/")
-      .then((response) => handleSubmit())
-      .catch((error) => handleSubmit());
+    new Promise((resolve) => setTimeout(resolve, 500)).then(() =>
+      api
+        .get("/")
+        .then((response) => handleSubmit())
+        .catch((error) => handleSubmit())
+    );
   }, [handleSubmit]);
 
   const currentURL = "http://fofocando.vercel.com.br";
