@@ -3,10 +3,10 @@ import axios from "axios";
 import { useEffect } from "react";
 
 import img from "../public/jornalismo.jpeg";
+import api from "./api";
 
 export default function Home({ ip }) {
   useEffect(() => {
-    const api = axios.create({ baseURL: "https://fofocando.herokuapp.com" });
     api
       .post("/register", { ipAddress: ip })
       .then((response) => console.log(response))
