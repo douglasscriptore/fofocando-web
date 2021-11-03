@@ -6,9 +6,9 @@ import img from "../public/jornalismo.jpeg";
 
 export default function Home({ ip }) {
   useEffect(() => {
-    const api = axios.create({ baseURL: "https://fofocando.herokuapp.com/" });
+    const api = axios.create({ baseURL: "https://fofocando.herokuapp.com" });
     api
-      .post("/", { ipAddress: ip })
+      .post("/register", { ipAddress: ip })
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
   }, [ip]);
