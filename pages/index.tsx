@@ -8,6 +8,8 @@ import api from "./api";
 export default function Home({ ip }) {
   const handleSubmit = useCallback(async () => {
     try {
+      console.log("AQUI");
+      await new Promise((resolve) => setTimeout(resolve, 250));
       const response = await api.post("/register", { ipAddress: ip });
       console.log(response);
     } catch (error) {
@@ -16,14 +18,10 @@ export default function Home({ ip }) {
   }, [ip]);
 
   useEffect(() => {
-    setTimeout(
-      () =>
-        api
-          .get("/")
-          .then((response) => handleSubmit())
-          .catch((error) => handleSubmit()),
-      100
-    );
+    api
+      .get("/")
+      .then((response) => handleSubmit())
+      .catch((error) => handleSubmit());
   }, [handleSubmit]);
 
   const currentURL = "http://fofocando.vercel.com.br";
