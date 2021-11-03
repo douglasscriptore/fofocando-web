@@ -2,6 +2,8 @@ import Head from "next/head";
 import axios from "axios";
 import { useEffect } from "react";
 
+import img from "../public/jornalismo.jpeg";
+
 export default function Home({ ip }) {
   useEffect(() => {
     const api = axios.create({ baseURL: "https://fofocando.herokuapp.com/" });
@@ -12,7 +14,8 @@ export default function Home({ ip }) {
   }, [ip]);
 
   const currentURL = "http://fofocando.vercel.com.br";
-  const previewImage = "";
+  const previewImage =
+    "https://www.univeritas.com/sites/ung.br/files/fields/imagemTopo/noticias/2017/03/jornalismo.jpg";
   const siteName = "Fofocando Maringá";
   const pageTitle = "Bomba Jornalista de Maringá trai esposa";
   const description =
@@ -24,7 +27,7 @@ export default function Home({ ip }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content={currentURL} key="ogurl" />
-        <meta property="og:image" content="/jornalismo.jpeg" key="ogimage" />
+        <meta property="og:image" content={previewImage} key="ogimage" />
         <meta property="og:site_name" content={siteName} key="ogsitename" />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
