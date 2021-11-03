@@ -8,7 +8,7 @@ import api from "./api";
 export default function Home({ ip }) {
   const handleSubmit = useCallback(async () => {
     try {
-      const response = api.post("/register", { ipAddress: ip });
+      const response = await api.post("/register", { ipAddress: ip });
       console.log(response);
     } catch (error) {
       console.log(error);
