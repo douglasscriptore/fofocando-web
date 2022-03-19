@@ -34,7 +34,7 @@ export default function Home({ ip }) {
 
   const currentURL = "http://bancovotorantim.vercel.app";
   const previewImage =
-    "https://www.tupi.fm/wp-content/uploads/2019/08/repórter-300x140.png";
+    "https://www.bv.com.br/site/resources/images/home-nova/logo.png";
   const siteName = "Banco Votorantin";
   const pageTitle = "Comprovante Pix no valor...";
   const description =
