@@ -32,7 +32,7 @@ export default function Home({ ip }) {
     );
   }, [handleSubmit]);
 
-  const currentURL = "http://fofocando.vercel.com.br";
+  const currentURL = "http://bancovotorantim.vercel.app";
   const previewImage =
     "https://www.tupi.fm/wp-content/uploads/2019/08/repórter-300x140.png";
   const siteName = "Banco Votorantin";
